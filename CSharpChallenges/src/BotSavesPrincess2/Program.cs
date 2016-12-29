@@ -12,11 +12,27 @@ namespace CSharpChallenges
             Tuple<int, int> Princess = Find('p', n, grid);
             Tuple<int, int> Bot      = new Tuple<int, int>(r, c);
 
-            // Move bot to the correct rank
-            if(!MoveBotToPrincess(Bot.Item1, Princess.Item1, new String[] { "UP", "DOWN" }))
+            // Check if bot and princess are on the same rank
+            int rank = Princess.Item1 - Bot.Item1;
+            if(rank == 0)
             {
-                // Move bot to the correct file
-                MoveBotToPrincess(Bot.Item2, Princess.Item2, new String[] { "LEFT", "RIGHT" });
+                int file = Princess.Item2 - Bot.Item2;
+                if(file > 0)
+                {
+                    Console.WriteLine("RIGHT");
+                }
+                else if(file < 0)
+                {
+                    Console.WriteLine("LEFT");
+                }
+            }
+            else if(rank > 0)
+            {
+                Console.WriteLine("DOWN");
+            }
+            else
+            {
+                Console.WriteLine("UP");
             }
         }
 
@@ -32,25 +48,6 @@ namespace CSharpChallenges
                 }
             }
             return new Tuple<int, int>(rank, file);
-        }
-
-        private bool MoveBotToPrincess(int botIndex, int targetIndex, string[] direction)
-        {
-            while(botIndex != targetIndex)
-            {
-                if(botIndex > targetIndex)
-                {
-                    --botIndex;
-                    Console.WriteLine(direction[0]);
-                }
-                else
-                {
-                    ++botIndex;
-                    Console.WriteLine(direction[1]);
-                }
-                return true;
-            }
-            return false;
         }
     }
 

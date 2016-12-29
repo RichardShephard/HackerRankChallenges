@@ -30,7 +30,7 @@ Output only the next move you take to rescue the princess. Valid moves are LEFT,
 
 ### Sample Output
 
-LEFT
+    LEFT
 
 ### Resultant State
 
