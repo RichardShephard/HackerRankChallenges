@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BotSavesPrincess", "src\CSharpChallenges\BotSavesPrincess.xproj", "{FDE46D56-DA70-4A1A-8338-FC89BA63FE79}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BotSavesPrincess2", "src\BotSavesPrincess2\BotSavesPrincess2.xproj", "{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,16 @@ Global
 		{FDE46D56-DA70-4A1A-8338-FC89BA63FE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDE46D56-DA70-4A1A-8338-FC89BA63FE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDE46D56-DA70-4A1A-8338-FC89BA63FE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FDE46D56-DA70-4A1A-8338-FC89BA63FE79} = {033FFC81-56EB-48D9-9ECC-A21B75CA7904}
+		{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181} = {033FFC81-56EB-48D9-9ECC-A21B75CA7904}
 	EndGlobalSection
 EndGlobal
