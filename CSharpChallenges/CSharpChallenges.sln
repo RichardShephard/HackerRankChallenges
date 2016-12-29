@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BotSavesPrincess", "src\CSharpChallenges\BotSavesPrincess.xproj", "{FDE46D56-DA70-4A1A-8338-FC89BA63FE79}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BotSavesPrincess", "src\BotSavesPrincess\BotSavesPrincess.xproj", "{FDE46D56-DA70-4A1A-8338-FC89BA63FE79}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BotSavesPrincess2", "src\BotSavesPrincess2\BotSavesPrincess2.xproj", "{8BF66AF2-98DE-460E-9CB8-24D0C8B6F181}"
 EndProject
