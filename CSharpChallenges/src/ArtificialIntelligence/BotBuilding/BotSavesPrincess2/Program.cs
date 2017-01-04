@@ -5,28 +5,39 @@ using System.Threading.Tasks;
 
 namespace CSharpChallenges
 {
-    public class BotSavesPrincess
+    /// <summary>
+    /// Solution class for the Bot Saves Princess 2 challenge resulting in a score of 17.5 (max 17.5)
+    /// </summary>
+    public class BotSavesPrincess2
     {
+        /// <summary>
+        /// Main entry point for the solution to the BotSavePrincess2 challenge
+        /// </summary>
+        /// <param name="n">Number of Rows in the grid given by <paramref name="grid"/></param>
+        /// <param name="r">Bot row index</param>
+        /// <param name="c">Bot column index</param>
+        /// <param name="grid">Character grid</param>
         public void NextMoveToPrincess(int n, int r, int c, String[] grid)
         {
             Tuple<int, int> Princess = Find('p', n, grid);
             Tuple<int, int> Bot      = new Tuple<int, int>(r, c);
 
-            // Check if bot and princess are on the same rank
-            int rank = Princess.Item1 - Bot.Item1;
-            if(rank == 0)
+            // Check if bot and princess are on the same row
+            int row = Princess.Item1 - Bot.Item1;
+            if(row == 0)
             {
-                int file = Princess.Item2 - Bot.Item2;
-                if(file > 0)
+                // We are in the same row, now find the column that the princess is in compared to the bot
+                int column = Princess.Item2 - Bot.Item2;
+                if(column > 0)
                 {
                     Console.WriteLine("RIGHT");
                 }
-                else if(file < 0)
+                else if(column < 0)
                 {
                     Console.WriteLine("LEFT");
                 }
             }
-            else if(rank > 0)
+            else if(row > 0)
             {
                 Console.WriteLine("DOWN");
             }
@@ -36,21 +47,31 @@ namespace CSharpChallenges
             }
         }
 
+        /// <summary>
+        /// Attempts to find character <paramref name="c"/> in the given grid
+        /// </summary>
+        /// <param name="c">Character to find</param>
+        /// <param name="n">Number of Rows in the grid given by <paramref name="grid"/></param>
+        /// <param name="grid">Character grid to search for <paramref name="c"/></param>
+        /// <returns>A tuple of the format (row, column)</returns>
         private Tuple<int, int> Find(char c, int n, string[] grid)
         {
-            int rank = 0, file = 0;
-            for(rank = 0; rank < n; ++rank)
+            int row = 0, column = 0;
+            for(row = 0; row < n; ++row)
             {
-                if(grid[rank].Contains(c))
+                // If we found the character IndexOf will return the index of it and we can exit
+                if((column = grid[row].IndexOf(c)) != -1)
                 {
-                    file = grid[rank].IndexOf(c);
                     break;
                 }
             }
-            return new Tuple<int, int>(rank, file);
+            return new Tuple<int, int>(row, column);
         }
     }
 
+    /// <summary>
+    /// Console application entry point taken from HackerRank sample code
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
@@ -70,10 +91,8 @@ namespace CSharpChallenges
                 grid[i] = Console.ReadLine();
             }
 
-            BotSavesPrincess bot = new BotSavesPrincess();
+            BotSavesPrincess2 bot = new BotSavesPrincess2();
             bot.NextMoveToPrincess(n, int_pos[0], int_pos[1], grid);
-
-            Console.Read();
         }
     }
 }
